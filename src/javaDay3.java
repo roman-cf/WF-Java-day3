@@ -28,14 +28,19 @@ public class JavaDay3 {
         for (int i = 0; i < output.length;i++){
             System.out.println(output[i]);
         }
-
+/*
     // A4
         Scanner sE4 = new Scanner(System.in);
         System.out.println("Enter First and Lastname");
         String cLStr = sE4.nextLine();
         initMaker(cLStr);
-
+*/
     // A5
+        Scanner a5 = new Scanner(System.in);
+        System.out.print("Enter Temperature and after whitespace C for Celsius oder F for Fahrenheit (e.g. '32 C': ");
+        String tempInputStr = a5.nextLine();
+        System.out.println("Result:" + new JavaDay3().tempCalculator(tempInputStr)+"°");
+
         /*
         Scanner a5 = new Scanner(System.in);
         System.out.print("Enter Temperature in Fahrenheit: ");
@@ -58,7 +63,6 @@ public class JavaDay3 {
         System.out.println("the area of the circle ist: "+ area);
          */
     // A7
-        /*
         Scanner s71 = new Scanner(System.in);
         System.out.print("Enter first number: ");
         int input1 = Integer.parseInt(s71.nextLine());
@@ -69,7 +73,7 @@ public class JavaDay3 {
         System.out.print("Enter third number");
         int input3 = Integer.parseInt(s73.nextLine());
         calcAverage(input1,input2,input3);
-        */
+
     // A8
         Scanner s8 = new Scanner(System.in);
         System.out.println("Enter first subject and than grade in % divided by space between): ");
@@ -82,8 +86,27 @@ public class JavaDay3 {
         System.out.println(subject);
         System.out.println(grade);
         grading(subject,grade);
-        
+
     }
+    double tempCalculator(String tempInputStr){
+        int indexDiv = tempInputStr.indexOf(" ");
+        String newTemperatureStr = tempInputStr.substring(0,indexDiv);
+        int temperature = Integer.parseInt(newTemperatureStr);
+        String unit = tempInputStr.substring(indexDiv);
+        unit = unit.trim();
+        double finalTemperature = 0;
+        System.out.println("String:" + tempInputStr + " Einheit:" + unit + " Zahl:" + temperature) ;
+        switch (unit){
+            case "C":
+                finalTemperature = (temperature*1.8)+32;
+
+            case "F":
+                finalTemperature = (temperature-32)*5/9;
+
+        }
+        return finalTemperature;
+    }
+
     public static void initMaker(String cLStr){
         String initialenAusgabe = "";
         int l = cLStr.length();

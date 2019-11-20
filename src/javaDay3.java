@@ -19,6 +19,10 @@ public class javaDay3 {
         System.out.println(hannah.compareTo(a3string));
         System.out.println(a3string.trim());
         System.out.println(a3string.replace("dogs","cats"));
+        System.out.println(a3string.replaceAll("e","3"));
+
+        String[] output = a3string.split("d");
+        System.out.println(output);
 
 
     }

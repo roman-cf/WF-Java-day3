@@ -36,6 +36,7 @@ public class JavaDay3 {
         System.out.println(namestring1+namestring2);
 
     // A5
+        /*
         Scanner a5 = new Scanner(System.in);
         System.out.print("Enter Temperature in Fahrenheit: ");
         double fahrenheitValue = Integer.parseInt(a5.nextLine());
@@ -47,15 +48,17 @@ public class JavaDay3 {
         double celsiusValue1 = Integer.parseInt(a51.nextLine());
         double fahrenheitValue1 = (celsiusValue1*1.8)+32;
         System.out.println(fahrenheitValue1);
-
+        */
     // A6
+        /*
         Scanner s6 = new Scanner(System.in);
         System.out.print("Enter Radius of Circle: ");
         int radius = Integer.parseInt(s6.nextLine());
         double area = Math.PI * Math.pow(radius, 2.0);
         System.out.println("the area of the circle ist: "+ area);
-
+         */
     // A7
+        /*
         Scanner s71 = new Scanner(System.in);
         System.out.print("Enter first number: ");
         int input1 = Integer.parseInt(s71.nextLine());
@@ -66,10 +69,20 @@ public class JavaDay3 {
         System.out.print("Enter third number");
         int input3 = Integer.parseInt(s73.nextLine());
         calcAverage(input1,input2,input3);
-
+        */
     // A8
+        Scanner s8 = new Scanner(System.in);
+        System.out.println("Enter first subject and than grade in % divided by space between): ");
+        String subjectGrade = s8.nextLine();
+        int indexDiv = subjectGrade.indexOf(" ");
+        String subject = subjectGrade.substring(0,indexDiv);
+        String gradeString = subjectGrade.substring(indexDiv);
+        gradeString = gradeString.trim();
+        int grade = Integer.parseInt(gradeString);
+        System.out.println(subject);
+        System.out.println(grade);
+        grading(subject,grade);
 
-        writeText(a3string);
     }
     public static void  writeText(String text) {
         System.out.print(text);   //prints the text parameter to System.out.
@@ -79,7 +92,16 @@ public class JavaDay3 {
         double outAverage = (input1+input2+input3)/3;
         System.out.println("The average is: "+outAverage);
     };
-    public static void grading(String subject, int)
+    public static void grading(String subject, int grade){
+        String gradeLabel ="";
+        if(grade>=90){gradeLabel = "A";}
+        else if(grade>=80){gradeLabel = "B";}
+        else if(grade>=70){gradeLabel = "C";}
+        else if(grade>=60){gradeLabel = "D";}
+        else if(grade>=40){gradeLabel = "E";}
+        else if(grade<40){gradeLabel = "F";}
+        System.out.println("In "+subject+" your grade is "+ gradeLabel);
+    }
 
 
 

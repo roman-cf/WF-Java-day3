@@ -1,7 +1,7 @@
 import java.util.Scanner;
 import java.lang.Math.*;
 
-public class javaDay3 {
+public class JavaDay3 {
     public static void main(String[] args) {
     // A1
     String hannah = "Did Hannah see bees? Hannah did.";
@@ -56,18 +56,33 @@ public class javaDay3 {
         System.out.println("the area of the circle ist: "+ area);
 
     // A7
+        Scanner s71 = new Scanner(System.in);
+        System.out.print("Enter first number: ");
+        int input1 = Integer.parseInt(s71.nextLine());
+        Scanner s72 = new Scanner(System.in);
+        System.out.print("Enter second number");
+        int input2 = Integer.parseInt(s72.nextLine());
+        Scanner s73 = new Scanner(System.in);
+        System.out.print("Enter third number");
+        int input3 = Integer.parseInt(s73.nextLine());
+        calcAverage(input1,input2,input3);
 
+    // A8
 
-
-
-
-
-
+        writeText(a3string);
     }
+    public static void  writeText(String text) {
+        System.out.print(text);   //prints the text parameter to System.out.
+    }
+
+    public static void calcAverage(int input1, int input2, int input3){
+        double outAverage = (input1+input2+input3)/3;
+        System.out.println("The average is: "+outAverage);
+    };
+    public static void grading(String subject, int)
+
+
+
+
 }
-public MyClass {
-public static int calcAverage ( int input1, int input2, int input3){
-        System.out.print(input1);
-        System.out.print(input2);
-        }
-        }
+

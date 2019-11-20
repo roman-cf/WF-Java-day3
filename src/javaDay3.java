@@ -30,10 +30,10 @@ public class JavaDay3 {
         }
 
     // A4
-    String names = "John Doe";
-        String namestring1 = String.valueOf(names.charAt(0));
-        String namestring2 = String.valueOf(names.charAt(5));
-        System.out.println(namestring1+namestring2);
+        Scanner sE4 = new Scanner(System.in);
+        System.out.println("Enter First and Lastname");
+        String cLStr = sE4.nextLine();
+        initMaker(cLStr);
 
     // A5
         /*
@@ -82,13 +82,7 @@ public class JavaDay3 {
         System.out.println(subject);
         System.out.println(grade);
         grading(subject,grade);
-
-    // Extras A4
-        Scanner sE4 = new Scanner(System.in);
-        System.out.println("Enter First and Lastname");
-        String cLStr = sE4.nextLine();
-        initMaker(cLStr);
-
+        
     }
     public static void initMaker(String cLStr){
         String initialenAusgabe = "";
@@ -110,6 +104,7 @@ public class JavaDay3 {
         double outAverage = (input1+input2+input3)/3;
         System.out.println("The average is: "+outAverage);
     };
+
     public static void grading(String subject, int grade){
         String gradeLabel ="";
         if(grade>=90){gradeLabel = "A";}

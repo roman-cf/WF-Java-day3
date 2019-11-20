@@ -83,7 +83,25 @@ public class JavaDay3 {
         System.out.println(grade);
         grading(subject,grade);
 
+    // Extras A4
+        Scanner sE4 = new Scanner(System.in);
+        System.out.println("Enter First and Lastname");
+        String cLStr = sE4.nextLine();
+        initMaker(cLStr);
+
     }
+    public static void initMaker(String cLStr){
+        String initialenAusgabe = "";
+        int l = cLStr.length();
+        for (int i = 0; i < l; i++){
+            if(Character.isUpperCase(cLStr.charAt(i))){
+                char letter = cLStr.charAt(i);
+                initialenAusgabe = initialenAusgabe + letter + " ";
+            }
+        }
+        System.out.println(initialenAusgabe);
+    }
+
     public static void  writeText(String text) {
         System.out.print(text);   //prints the text parameter to System.out.
     }
